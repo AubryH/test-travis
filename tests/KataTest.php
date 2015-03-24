@@ -5,7 +5,7 @@
  * Date: 24/03/15
  * Time: 10:20
  */
-require_once 'vendor/phpunit/phpunit/src/Framework/TestCase.php';
+
 require_once 'src/Kata.php';
 require_once 'src/Console.php';
 require_once 'src/Prompter.php';
