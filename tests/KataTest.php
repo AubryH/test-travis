@@ -6,9 +6,11 @@
  * Time: 10:20
  */
 
-require_once '../src/Kata.php';
-require_once '../src/Console.php';
-require_once '../src/Prompter.php';
++$dir = dirname(__FILE__);
++include "$dir/../src/Kata.php";
++include "$dir/../src/Console.php";
++include "$dir/../src/Prompter.php";
+
 
 class KataTest extends PHPUNIT_Framework_TestCase{
 
