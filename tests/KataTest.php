@@ -6,9 +6,9 @@
  * Time: 10:20
  */
 
-require_once 'src/Kata.php';
-require_once 'src/Console.php';
-require_once 'src/Prompter.php';
+require_once '../src/Kata.php';
+require_once '../src/Console.php';
+require_once '../src/Prompter.php';
 
 class KataTest extends PHPUNIT_Framework_TestCase{
 
