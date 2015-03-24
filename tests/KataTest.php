@@ -84,3 +84,4 @@ class KataTest extends PHPUNIT_Framework_TestCase{
         $this->assertEquals(6, Kata::add($five));
     }
 }
+?>
