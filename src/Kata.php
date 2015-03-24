@@ -23,7 +23,36 @@ class Kata {
     const MAX_SUMMABLE_INT = 1000;
 
 
-    public static function add($numbers){
+    private $logger;
+    private $webservice;
+    private $console;
+
+    /**
+     * @return mixed
+     */
+    public function getConsole()
+    {
+        return $this->console;
+    }
+
+    /**
+     * @param mixed $console
+     */
+    public function setConsole($console)
+    {
+        $this->console = $console;
+    }
+
+
+    function __construct($logger, $webservice, $console)
+    {
+        $this->logger = $logger;
+        $this->webservice = $webservice;
+        $this->console = $console;
+    }
+
+
+    public function add($numbers){
         $input = $numbers;
         $delimeters = self::BASICDELIMETERS;
 
@@ -70,6 +99,16 @@ class Kata {
         if(sizeof($negative)>0){
             throw new Exception("negatives not allowed '" . implode("' '", $negative) . "'");
         }
-        return array_sum($numTosum);
+
+        $result = array_sum($numTosum);
+        try{
+            $this->logger->Write($result);
+        }catch(Exception $e){
+            $this->webservice->notifyLoggingError($e->getMessage());
+        }
+
+
+        $this->console->printMsg("The result is " . $result);
+        return $result;
   }
 }
