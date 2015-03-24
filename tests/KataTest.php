@@ -15,7 +15,7 @@ class KataTest extends PHPUNIT_Framework_TestCase{
      */
     public function testAddEmptyString(){
         $emptyString = "";
-        $this->assertEquals(7, Kata::add($emptyString));
+        $this->assertEquals(0, Kata::add($emptyString));
     }
 
     public function testAddOneNumberString(){
