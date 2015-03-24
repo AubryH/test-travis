@@ -5,7 +5,6 @@
  * Date: 24/03/15
  * Time: 10:20
  */
-require_once 'vendor/phpunit/phpunit/src/Framework/TestCase.php';
 require_once 'src/Kata.php';
 
 class KataTest extends PHPUNIT_Framework_TestCase{
